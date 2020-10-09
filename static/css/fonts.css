@@ -1,0 +1,10 @@
+/* Font Faces */
+@font-face {
+  font-family: Sarabun;
+  src: url(/static/fonts/Sarabun/Sarabun-Regular.ttf);
+}
+
+@font-face {
+  font-family: Varela;
+  src: url(/static/fonts/Varela/Varela-Regular.ttf);
+}

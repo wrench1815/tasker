@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/fonts.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}"/>
+    {% block pageTitle %}
+    
+    {% endblock pageTitle %}
+  </head>
+  <body class="bg-light d-flex flex-column h-100">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar sticky-top justify-content-center">
+    <a class="navbar-brand task-header" href="{{ url_for('index') }}">Tasker</a>
+  </nav>
+
+
+    <center>
+      {% block pageBody %}
+      
+      {% endblock pageBody %}
+    </center>
+     <!-- Footer -->
+    <br class="m-4"></br>
+    <footer class="footer bg-dark mt-auto py-5 text-center">
+      <div class="container">
+        <span class="text-white">&#169; 2020 wrench1815 | All rights reserved</span>
+        <br>
+        <span class="text-white">Made with Flask and <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-heart-fill text-danger" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+          </svg>
+        </span>
+      </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- For some reason the default method of including scripts doesn't work -->
+    <!-- This is work around, something i copied from Bootstrap Examples -->
+    <script src="{{ url_for('static', filename='assets/popper/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/jquery/jquery-3.5.1.slim.min.js') }}"></script>
+    <script>window.jQuery || document.write('<script src="{{ url_for('static', filename='assets/jquery/jquery-3.5.1.slim.min.js') }}"><\/script>')</script><script src="{{ url_for('static', filename='assets/bootstrap/js/bootstrap.min.js') }}"></script>
+  </body>
+</html>

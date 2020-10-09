@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block pageTitle %}
+  <title>Tasker</title>
+{% endblock pageTitle %}  
+
+{% block pageBody %}
+  <div class="content container">
+    <p class="m-2">Update Task</p>
+    <form class="input-group" action="{{ url_for('update',id=task.id) }}" method="post" id="update_form">
+      <input class="form-control mr-2" type="text" name="content" id="content" value="{{ task.content }}">
+      <input class="btn btn-outline-success submit-button" type="submit" value="Add Task">
+    </form>
+  </div>
+  <script type="text/javascript">update_form.content.focus();</script>
+{% endblock pageBody %}
